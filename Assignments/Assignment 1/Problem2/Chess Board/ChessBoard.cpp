@@ -58,7 +58,7 @@ int main()
         /*Another approach: I commented the above two commands and print a square for
           each iteration of the while loop (so that the square made by the last while loop 
           remains on the screen). However, the resulting chess board flickered a lot..not
-          sure why*/
+          sure why...Also GL_QUADS command doesn't seem to work for some reason.*/
         for (j = 0;j < 64;j++)
         {
             chessShader.setInt("times", j);
