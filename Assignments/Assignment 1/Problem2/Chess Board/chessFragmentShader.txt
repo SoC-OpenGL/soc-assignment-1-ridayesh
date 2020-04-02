@@ -1,0 +1,7 @@
+#version 430
+in vec4 triangleColour;
+out vec4 colour;
+void main()
+{
+    colour = triangleColour;
+}

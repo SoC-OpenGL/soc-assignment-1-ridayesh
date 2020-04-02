@@ -1,0 +1,11 @@
+#version 430 core
+layout (location = 0) in vec2 pos;
+layout (location = 1) in vec2 aTextCoord;
+out vec2 TextCoord;
+uniform int times;
+void main()
+{
+    gl_Position = vec4((pos.x)*cos(times*radians(1.0f))-(pos.y)*sin(times*radians(1.0f)),(pos.x)*sin(times*radians(1.0f))+(pos.y)*cos(times*radians(1.0f)),0.0f,1.0f);
+    TextCoord = vec2((aTextCoord.x)*cos(times*radians(1.0f))-(aTextCoord.y)*sin(times*radians(1.0f)),(aTextCoord.x)*sin(times*radians(1.0f))+(aTextCoord.y)*cos(times*radians(1.0f)));
+
+}
